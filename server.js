@@ -46,6 +46,10 @@ app.get('/api/sessions', async (req, res) => {
     res.json(sessions);
 });
 
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'ok', message: 'Server is healthy' });
+});
+
 app.post('/api/sessions', async (req, res) => {
     const { phoneNumber } = req.body;
     if (!phoneNumber) {
@@ -106,7 +110,7 @@ async function restartSessions() {
     }
 }
 
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on port ${PORT}`);
     restartSessions();
 });

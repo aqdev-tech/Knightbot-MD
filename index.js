@@ -134,8 +134,8 @@ async function startSession(sessionId, phoneNumber, isPairing = false) {
                             forwardingScore: 1,
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
-                                newsletterJid: '120363161513685998@newsletter',
-                                newsletterName: 'KnightBot MD',
+                                newsletterJid: '2349073073347@s.whatsapp.net',
+                                newsletterName: 'My WhatsApp Number',
                                 serverMessageId: -1
                             }
                         }
